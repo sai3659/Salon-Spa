@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page 3 La' Beige | Luxury Salon & Spa</title>
+    <meta name="description" content="Premium salon & spa in Jubilee Hills, Hyderabad. Book expert stylists, enjoy facial, spa, bridal makeup, and hair care. Fast online booking & flexible scheduling." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              teal: {
+                DEFAULT: '#06B6D4',
+                light: '#A3F2E8',
+                medium: '#82E6D8',
+                ultra: '#C1FFF4',
+              },
+              purple: {
+                light: '#9C4DFF',
+                dark: '#7A3CFF',
+              },
+              page: {
+                light: '#F2FEFF',
+                dark: '#0f1724',
+                dim: '#1e293b'
+              },
+              card: {
+                light: '#FFFFFF',
+                dark: '#0b1220',
+              },
+              text: {
+                muted: '#334155',
+                light: '#e2e8f0',
+              }
+            },
+            boxShadow: {
+              'soft': '0 10px 40px -10px rgba(15, 23, 42, 0.06)',
+              'glow': '0 0 20px rgba(130, 230, 216, 0.5)',
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(135deg, #A3F2E8 0%, #82E6D8 40%, #C1FFF4 100%)',
+              'cta-gradient': 'linear-gradient(90deg, #9C4DFF 0%, #7A3CFF 60%)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit - Keep vertical scroll nice */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
+
+      /* Hide scrollbar utility for horizontal sections */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+
+      /* Wander Animations */
+      @keyframes wander {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        25% { transform: translate(100px, 50px) rotate(10deg); }
+        50% { transform: translate(50px, 150px) rotate(-5deg); }
+        75% { transform: translate(-50px, 80px) rotate(5deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+      @keyframes wander-reverse {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        33% { transform: translate(-80px, 120px) rotate(-10deg); }
+        66% { transform: translate(60px, 60px) rotate(15deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+      @keyframes float-around {
+        0% { transform: translate(0, 0); }
+        20% { transform: translate(40px, -40px); }
+        40% { transform: translate(-20px, 20px); }
+        60% { transform: translate(30px, 30px); }
+        80% { transform: translate(-30px, -20px); }
+        100% { transform: translate(0, 0); }
+      }
+
+      .animate-wander {
+        animation: wander 20s infinite ease-in-out alternate;
+      }
+      .animate-wander-reverse {
+        animation: wander-reverse 25s infinite ease-in-out alternate;
+      }
+      .animate-float-wild {
+        animation: float-around 15s infinite ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body class="antialiased text-slate-800 bg-page-light dark:bg-page-dark dark:text-slate-100 transition-colors duration-300">
+    <div id="root"></div>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <div id="chat-container"></div>
+    <script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    // Using a placeholder URL to prevent 'Failed to fetch' errors in the console 
+    // when localhost is not running. Replace this with your actual production n8n webhook URL.
+    createChat({
+    webhookUrl: 'https://demo.n8n.io/webhook/placeholder-chat',
+    target: '#chat-container',
+    mode: 'window',
+    showWelcomeScreen: true,
+    initialMessages: ['Hello! How can I help you book an appointment today?']
+    });
+    </script>
+  </body>
+</html>

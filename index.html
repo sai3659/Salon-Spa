@@ -135,19 +135,5 @@
 </head>
   <body class="antialiased text-slate-800 bg-page-light dark:bg-page-dark dark:text-slate-100 transition-colors duration-300">
     <div id="root"></div>
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    <div id="chat-container"></div>
-    <script type="module">
-    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-    // Using a placeholder URL to prevent 'Failed to fetch' errors in the console 
-    // when localhost is not running. Replace this with your actual production n8n webhook URL.
-    createChat({
-    webhookUrl: 'https://demo.n8n.io/webhook/placeholder-chat',
-    target: '#chat-container',
-    mode: 'window',
-    showWelcomeScreen: true,
-    initialMessages: ['Hello! How can I help you book an appointment today?']
-    });
-    </script>
   </body>
 </html>

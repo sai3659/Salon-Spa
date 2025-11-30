@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun, MapPin, Phone, Instagram, Facebook, Twitter, Mail } from 'lucide-react';
 import { COMPANY_DETAILS } from '../constants';
 import { useToast } from './Toast';
+import { Chatbot } from './Chatbot';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isDark, setIsDark] = useState(false);
@@ -261,6 +262,9 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
           </div>
         </div>
       </footer>
+      
+      {/* Global Chatbot */}
+      <Chatbot />
     </div>
   );
 };

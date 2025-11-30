@@ -263,7 +263,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
         </div>
       </footer>
       
-      {/* Global Chatbot */}
+      {/* Floating Chatbot */}
       <Chatbot />
     </div>
   );
